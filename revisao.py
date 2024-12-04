@@ -1,4 +1,6 @@
 # ler entrada do usuário
+situacao = ""
+aluno = [] #lista que guarda56todos os alunos cadastrar
 cont = 0 #variavel que controla  a repetição
 escolha_usuario = int(input()) # variavel que  guarda quantas vezes  o codigo vai rodar 
 while cont <escolha_usuario:
@@ -25,10 +27,8 @@ while cont <escolha_usuario:
             situacao = "reprovado na recuperação"
     else:
         situacao = "reprovado por média"
+    #enviar os dados do aluno para a lista alunos
+    aluno.append([ nome, faltas, media, situacao])
+    cont += 1
     # relatório
-    print("nome:", nome)
-    print("notas:", nota1,nota2,nota3,nota4)
-    print("faltas:", faltas)
-    print("média:",media)
-    print("situação",situacao)
-    cont = cont+1
+print(aluno)
