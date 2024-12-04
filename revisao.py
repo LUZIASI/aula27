@@ -2,16 +2,16 @@
 situacao = ""
 aluno = [] #lista que guarda56todos os alunos cadastrar
 cont = 0 #variavel que controla  a repetição
-escolha_usuario = int(input()) # variavel que  guarda quantas vezes  o codigo vai rodar 
+escolha_usuario = int(input("digite quantos alunos voce deseja cadastrar:")) # variavel que  guarda quantas vezes  o codigo vai rodar 
 while cont <escolha_usuario:
-    nome = input() #armazenar o nome do aluno
+    nome = input("digite os nomes do aluno:") #armazenar o nome do aluno
     print(nome)
-    nota1 = float(input())#ler as notas
-    nota2 = float(input())#ler as notas
-    nota3 = float(input())#ler as notas
-    nota4 = float(input())#ler as notas
+    nota1 = float(input("digite a primera nota:"))#ler as notas
+    nota2 = float(input("digite a segunda nota:"))#ler as notas
+    nota3 = float(input("digite a terceira nota:"))#ler as notas
+    nota4 = float(input("digite a quarta nota:"))#ler as notas
 
-    faltas = int(input())
+    faltas = int(input("digite a quantidade de faltas:"))
     #calculo da media
     media = (nota1+nota2+nota3+nota4)/4
     #lógica da situação 
@@ -20,7 +20,7 @@ while cont <escolha_usuario:
     elif media >=8:
         situacao = "aprovado"
     elif media >=5: #recuperação
-        recupecao = float(input()) #ler a nota da prova de recuperção
+        recupecao = float(input("digite a nota da recuperaçaõ:")) #ler a nota da prova de recuperção
         if recupecao >= (10-media):
             situacao ="aprovado na reuperação"
         else:
