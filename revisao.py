@@ -2,13 +2,13 @@ aluno = []
 while True:  
      #lista que guarda56todos os alunos cadastrar
     # ler entrada do usuário
-    escolhamenu = int(input("Escolha uma opção: 1. Cadastro - 2. Relatorio")) #variavel que guarda qual opção do menu o usuário escolheu
+    escolhamenu = int(input("Escolha uma opção: 1. Cadastro: - 2. Relatorio: -3 para encerrar:")) #variavel que guarda qual opção do menu o usuário escolheu
     if escolhamenu == 1: #se a escolha for para realizar um cadastro
             situacao = ""
             
             cont = 0 #variavel que controla  a repetição
             escolha_usuario = int(input("digite quantos alunos voce deseja cadastrar:")) # variavel que  guarda quantas vezes  o codigo vai rodar 
-            while cont < escolha_usuario:
+            while cont < escolha_usuario:#infinita
                 nome = input("digite os nomes do aluno:") #armazenar o nome do aluno
                 nota1 = float(input("digite a primera nota:"))#ler as notas
                 nota2 = float(input("digite a segunda nota:"))#ler as notas
@@ -36,3 +36,6 @@ while True:
                 cont+=1
     elif escolhamenu == 2: # relatório
         print(aluno)
+    elif escolhamenu == 3:# se o usuario escolheu 3 irá encerrar o programa
+      break #quebra a execução do enquanto
+      
