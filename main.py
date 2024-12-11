@@ -1,4 +1,9 @@
 #cadastro de usuário e senha
+#declarar função
+def vrfcr_senha ():
+    senha_validar = input ("digite sua senha")
+    if senha_validar == senha :
+        return True # retornar o verdadeiro
 saldo = 0.0 #variavel que guardará o saldo do usuário
 while True :
 #menu principal
@@ -14,8 +19,7 @@ while True :
     elif escolha_menu == 2: # se o usuario escolher login 
         #comparar as in. cadastradas com uma leitura
         login_usuario  = input("digite seu usuário: ")
-        login_senha = input("digite sua senha:")
-        if login_usuario == usuario and login_senha == senha:
+        if login_usuario == usuario and vrfcr_senha():
             print ("login realizado com sucesso")
             # se login correto,entra no
             #menu principal do app 
@@ -30,20 +34,19 @@ while True :
                     print("novo saldo é", saldo)
                 elif escolha_principal == 2: # saque
                     valor_saque = float (input("digite o valor do saque "))
-                    senha_saque = input("digite sua senha")
-                    if senha_saque == senha : #se senha correta
+                    if vrfcr_senha(): #se senha correta
                         saldo = saldo - valor_saque # subtrai o valor do saldo
                     else:
                         print("senha incorreta")
                 elif escolha_principal == 4 : #se usuario escolher pix
-                    senha_pix = input("digiye sua senha")
-                    if senha_pix == senha:
-                        
+                    valor_pix = float(input())
+                    if vrfcr_senha():
+                        saldo = saldo-valor_pix
                     else :
                         print("senha incorreta")
                 elif escolha_principal == 5 : #encerrar
-                    senha_encerrar == senha:
-                    break
+                    if vrfcr_senha():
+                        break #parar o programa
                 else:
                     print ("senha incorreta")
                         
